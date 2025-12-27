@@ -7,12 +7,12 @@ import { ChevronLeft, ChevronRight, Menu, X } from "lucide-react"
 import { useState } from "react"
 import LanguageSwitch from "@/components/LanguageSwitch"
 import { Instagram } from "lucide-react"
-import localFont from 'next/font/local';
+import { Playpen_Sans_Arabic } from "next/font/google";
 
-const woolWich = localFont({
-  src: '../public/fonts/Woolwich.otf',
+const playpenSansArabic = Playpen_Sans_Arabic({
+  subsets: ['arabic'],
   display: 'swap',
-});
+})
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -30,38 +30,38 @@ export default function Home() {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/" className="text-sm font-medium hover:text-gray-600">
-            Home
+          <Link href="/" className="text-lg font-medium hover:text-gray-600">
+            الرئيسية
           </Link>
-          <Link href="#" className="text-sm font-medium hover:text-gray-600">
-            About
+          <Link href="#" className="text-lg font-medium hover:text-gray-600">
+            حول
           </Link>
-          <Link href="#" className="text-sm font-medium hover:text-gray-600">
-            Products
+          <Link href="#" className="text-lg font-medium hover:text-gray-600">
+            منتجات
           </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
           <Link href="#">
-            <Image src={'/facebook.png' } alt="Facebook" width={24} height={24} className="w-6 h-6" />
+            <Image src={'/Facebook.png'} alt="Facebook" width={24} height={24} className="w-6 h-6" />
           </Link>
           <Link href="#">
-            <Image src={'/TikTok.png' } alt="TikTok" width={24} height={24} className="w-6 h-6" />
+            <Image src={'/TikTok.png'} alt="TikTok" width={24} height={24} className="w-6 h-6" />
           </Link>
           <Link href="https://www.instagram.com/crumbs.kw?igsh=a3M1cW45cmU3cXYx">
-            <Image src={'/Instagram.png' } alt="Instagram" width={24} height={24} className="w-6 h-6" />
+            <Image src={'/Instagram.png'} alt="Instagram" width={24} height={24} className="w-6 h-6" />
           </Link>
           <Link href="https://wa.me/message/PPKFUFEXJHIWJ1">
-            <Image src={'/WhatsApp.png' } alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
+            <Image src={'/WhatsApp.png'} alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
           </Link>
           <div className="flex items-center gap-2 ml-4">
-            <span className={woolWich.className + " text-lg"}>EN</span>
+            <span className={playpenSansArabic.className + " text-lg font-extrabold"}>EN</span>
             <LanguageSwitch />
-            <span className={woolWich.className + " text-lg"}>Ar</span>
+            <span className={playpenSansArabic.className + " text-lg font-extrabold"}>العربية</span>
           </div>
           <Link href="https://wa.me/message/PPKFUFEXJHIWJ1" target="_blank">
             <Button className="bg-[#2d7a4f] hover:bg-[#256340] text-white rounded-full px-6 py-5.5 shadow-[3px_4px_0px_#000000]">
-              Order Now <Image src="/Whatsappwhite.png" alt="WhatsApp" width={20} height={20} />
+              اطلب الآن <Image src="/Whatsappwhite.png" alt="WhatsApp" width={20} height={20} />
             </Button>
           </Link>
         </div>
@@ -73,40 +73,40 @@ export default function Home() {
         {mobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-white border-b shadow-lg md:hidden z-50">
             <div className="flex flex-col p-6 gap-6 items-center justify-center">
-              <Link href="#homestart" className="text-sm font-medium hover:text-gray-600">
-                Home
+              <Link href="#homestart" className="text-lg font-medium hover:text-gray-600">
+                الرئيسية
               </Link>
-              <Link href="#aboutus" className="text-sm font-medium hover:text-gray-600">
-                About
+              <Link href="#aboutus" className="text-lg font-medium hover:text-gray-600">
+                حول
               </Link>
-              <Link href="#products" className="text-sm font-medium hover:text-gray-600">
-                Products
+              <Link href="#products" className="text-lg font-medium hover:text-gray-600">
+                منتجات
               </Link>
 
               <div className="flex items-center gap-4 pt-4 border-t">
                 <Link href="#">
-                  <Image src={'/facebook.png' } alt="Facebook" width={24} height={24} className="w-6 h-6" />
+                  <Image src={'/Facebook.png'} alt="Facebook" width={24} height={24} className="w-6 h-6" />
                 </Link>
                 <Link href="#">
-                  <Image src={'/TikTok.png' } alt="TikTok" width={24} height={24} className="w-6 h-6" />
+                  <Image src={'/TikTok.png'} alt="TikTok" width={24} height={24} className="w-6 h-6" />
                 </Link>
                 <Link href="https://www.instagram.com/crumbs.kw?igsh=a3M1cW45cmU3cXYx">
-                  <Image src={'/Instagram.png' } alt="Instagram" width={24} height={24} className="w-6 h-6" />
+                  <Image src={'/Instagram.png'} alt="Instagram" width={24} height={24} className="w-6 h-6" />
                 </Link>
                 <Link href="https://wa.me/message/PPKFUFEXJHIWJ1">
-                  <Image src={'/WhatsApp.png' } alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
+                  <Image src={'/WhatsApp.png'} alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
                 </Link>
               </div>
 
               <div className="flex items-center gap-2">
-                <span className={woolWich.className + " text-lg"}>EN</span>
+                <span className={playpenSansArabic.className + " text-lg font-extrabold"}>EN</span>
                 <LanguageSwitch />
-                <span className={woolWich.className + " text-lg"}>Ar</span>
+                <span className={playpenSansArabic.className + " text-lg font-extrabold"}>العربية</span>
               </div>
 
               <Link href="https://wa.me/message/PPKFUFEXJHIWJ1" target="_blank" >
                 <Button className="bg-[#2d7a4f] hover:bg-[#256340] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]">
-                  Order Now <Image src="/Whatsappwhite.png" alt="WhatsApp" width={20} height={20} />
+                  اطلب الآن <Image src="/Whatsappwhite.png" alt="WhatsApp" width={20} height={20} />
                 </Button>
               </Link>
             </div>
@@ -115,25 +115,25 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="md:bg-[url('/herobg.png')] bg-[url('/heromobile.png')] md:bg-size-[1400px_800px] bg-cover bg-bottom bg-no-repeat rounded-[64px] md:h-auto h-125 md:py-30 py-15 md:px-20 px-8 mt-2 md:w-350 md:mx-auto mx-6">
+      <section className="md:bg-[url('/heroarabic.png')] bg-[url('/heromobile.png')] md:bg-size-[1400px_800px] bg-cover bg-bottom bg-no-repeat rounded-[64px] md:h-auto h-125 md:py-30 py-15 md:px-20 px-8 mt-2 md:w-350 md:mx-auto mx-6">
         <div>
-          <h1 className={woolWich.className + " md:text-[128px] text-[40px] text-[#411D13] font-black mb-6 leading-tight relative hidden md:block"}>
-            FRESHLY <span className="md:w-21 w-17 h-7.5 bg-[#F97D46] md:text-[20px] text-sm rounded-2xl text-white md:font-normal font-bold md:rotate-20 absolute md:left-87.5 md:top-22.5 right-[10%] bottom-[20%] -rotate-20 text-center pt-0.5">GOOEY</span> BAKED
+          <h1 className={playpenSansArabic.className + " text-[96px] text-[#411D13] font-bold mb-6 leading-tight relative hidden md:block"}>
+            توّه طالع <span className="w-21 h-7.5 bg-[#F97D46] text-[20px] rounded-2xl text-white font-bold absolute right-[25%] top-[30%] -rotate-20 text-center pt-0.5">ناعم</span> من الفرن
             <br />
-            JUST FOR YOU
+            خصيصًا لك
           </h1>
-          <p className={woolWich.className + " md:text-[40px] text-[#411D13] mb-8 max-w-150 relative hidden md:block"}>PREMIUM COOKIES AND SPECIAL CAKES DELIVERED WARM TO YOUR DOOR.<span className="md:w-21 w-17 h-7.5 bg-[#80003C] md:text-[20px] text-sm rounded-2xl text-white md:font-normal font-bold md:-rotate-20 rotate-20 absolute md:-right-1 md:top-17.5 -bottom-2 right-[33%] text-center pt-0.5">FRESH</span></p>
+          <p className={playpenSansArabic.className + " text-[40px] font-bold text-[#411D13] mb-8 max-w-150 relative hidden md:block"}>كوكيز فاخرة وكيكات مميّزة نوصلها لك وهي دافية لين باب بيتك.<span className="w-21 h-7.5 bg-[#80003C] text-[20px] rounded-2xl text-white font-bold rotate-20 absolute right-[77%] bottom-[15%] text-center pt-0.5">طازج</span></p>
           {/* Mobile */}
-          <h1 className={woolWich.className + " text-[40px] text-[#411D13] font-black mb-6 leading-tight block md:hidden"}>
-            FRESHLY BAKED
+          <h1 className={playpenSansArabic.className + " text-[40px] text-[#411D13] font-black mb-6 leading-tight block relative md:hidden"}>
+            توّه طالع من الفرن
             <br />
-            JUST FOR YOU <span className="w-17 h-7.5 bg-[#F97D46] text-sm rounded-2xl text-white font-bold rotate-20 text-center pt-0.5 inline-block max-[405px]:hidden">GOOEY</span>
+            خصيصًا لك <span className="w-17 h-6 bg-[#F97D46] text-sm rounded-2xl text-white font-bold -rotate-20 text-center pt-0.5 inline-block max-[405px]:hidden absolute left-[20%] bottom-[20%]">ناعم</span>
           </h1>
-          <p className={woolWich.className + " text-[16px] text-[#411D13] mb-8 max-w-150 block md:hidden"}>PREMIUM COOKIES AND SPECIAL CAKES DELIVERED WARM TO YOUR DOOR.<span className="w-17 h-7.5 bg-[#80003C] rounded-2xl text-white font-bold -rotate-15 text-center pt-0.5 inline-block max-[405px]:hidden">FRESH</span></p>
+          <p className={playpenSansArabic.className + " text-[20px] font-bold text-[#411D13] mb-8 max-w-150 block md:hidden"}>كوكيز فاخرة وكيكات مميّزة نوصلها لك وهي دافية لين باب بيتك.<span className="w-17 h-6 bg-[#80003C] rounded-2xl text-white text-[12px] rotate-15 text-center pt-0.5 inline-block max-[405px]:hidden">طازج</span></p>
           {/* end mobild */}
           <Link href="https://wa.me/message/PPKFUFEXJHIWJ1" target="_blank">
-            <Button className="bg-[#2d7a4f] hover:bg-[#256340] text-white rounded-full px-6 py-5.5 shadow-[3px_4px_0px_#000000]">
-              Order Now <Image src="/Whatsappwhite.png" alt="WhatsApp" width={20} height={20} />
+            <Button className="bg-[#2d7a4f] hover:bg-[#256340] text-white font-bold rounded-full px-6 py-5.5 shadow-[3px_4px_0px_#000000]">
+              اطلب الحين <Image src="/Whatsappwhite.png" alt="WhatsApp" width={20} height={20} />
             </Button>
           </Link>
         </div>
@@ -142,19 +142,23 @@ export default function Home() {
       {/* Our Passion Section */}
       <section id="aboutus" className="mt-16 mb-10 mx-6 bg-white md:w-350 md:mx-auto ">
         <div className="flex flex-col-reverse md:flex md:flex-row md:justify-between ">
-          <div className="md:w-[45%] h-105.5">
-            <video autoPlay loop muted className="rounded-3xl h-105.5 object-cover w-full mt-5 md:mt-0">
+          <div className="md:w-[45%] h-110.5">
+            <video autoPlay loop muted className="rounded-3xl h-110.5 object-cover w-full mt-5 md:mt-0">
               <source src="/about.mov" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <div className="md:w-[49%] flex flex-col">
-            <h2 className={woolWich.className + " md:text-[64px] text-[40px] text-[#411D13] font-black mb-6 relative hidden md:block"}>OUR<span className="w-26 h-8.5 bg-[#F5DF23] text-[20px] rounded-2xl text-[#411D13] font-normal md:rotate-11 -rotate-20 absolute md:left-11.5 md:top-0 bottom-7 left-[35%] text-center pt-0.5">ABOUT US</span> PASSION FOR BAKING</h2>
+            <h2 className={playpenSansArabic.className + " text-[64px] text-[#411D13] font-black mb-6 relative hidden md:block"}>قصتنا <span className="w-26 h-8.5 bg-[#F5DF23] text-[20px] rounded-2xl text-[#411D13] font-normal rotate-11 absolute right-[17.5%] -top-[10%] text-center pt-0.5">منو إحنا</span> بإختصار</h2>
             {/* mobile */}
-            <h2 className={woolWich.className + " text-[40px] text-[#411D13] font-black mb-6 relative block md:hidden"}><span className="w-26 h-8.5 bg-[#F5DF23] text-[20px] rounded-2xl text-[#411D13] font-normal rotate-20 absolute -top-6 left-0 text-center pt-0.5">ABOUT US</span> OUR PASSION FOR BAKING</h2>
+            <h2 className={playpenSansArabic.className + " text-[40px] text-[#411D13] font-black mb-6 relative block md:hidden"}><span className="w-20 h-6 bg-[#F5DF23] text-[12px] rounded-2xl text-[#411D13] font-normal rotate-15 absolute -top-4 left-[35%] text-center pt-0.5">منو إحنا</span>قصتنا بإختصار</h2>
             {/* end mobile */}
             <p className="text-gray-700 md:leading-10 leading-relaxed">
-              Our story began in a small kitchen where we chased a simple passion, creating cookies that tasted like pure joy. What started as homemade experiments soon became our signature recipes, each crafted with heart. After seeing how one cookie could spark a smile, we knew we wanted to share that happiness with everyone. Today, we bake with that same purpose: spreading joy, one cookie at a time.
+              بدت حكايتنا بمطبخ صغير، بإمكانات بسيطة لكن بشغف كبير وحب صادق للخبز. كنا نجرب وصفات كوكيز بيتية، نعدّل ونطوّر لين وصلنا لطعم يخلّي أول قضمة تفرّح القلب وتطلب الثانية بدون تفكير.
+              <br/><br/>
+              مع الوقت، صارت هالتجارب وصفاتنا الخاصة، وكل كوكيز صارت تنخبز بعناية وكأنها معمولة لشخص نعرفه. ومن أول مرة شفنا فيها ابتسامة بسبب كوكيز، عرفنا إن الموضوع أكبر من حلى. هو إحساس، وذكرى، ولحظة حلوة.
+              <br/><br/>
+              واليوم، مهما كبرنا وتطوّرنا، لسّه نخبز بنفس الحب ونفس الشغف. نختار مكوناتنا بعناية، ونخبز طازج يوميًا، علشان نوصل لك تجربة دافية، صادقة، وطعم ما ينسى.
             </p>
           </div>
         </div>
@@ -163,52 +167,52 @@ export default function Home() {
       {/* Signatures Section */}
       <section id="products" className="pb-16 pt-10 bg-white">
         <div className="md:w-350 md:mx-auto mx-6 flex flex-col md:flex-row md:items-center md:mb-10">
-          <h2 className={woolWich.className + " text-[64px] text-[#411D13] font-black relative hidden md:block"}>SIGNATURES<span className="w-40 h-8.5 bg-[#F97D46] text-[20px] rounded-2xl text-white font-normal -rotate-11 absolute top-0 left-65 text-center pt-0.5">OUR PRODUCTS</span> WE BAKE</h2>
+          <h2 className={playpenSansArabic.className + " text-[64px] w-87.5 text-[#411D13] font-black mb-6 relative hidden md:block"}><span className="w-30 h-8.5 bg-[#F97D46] text-[20px] rounded-2xl text-white font-normal -rotate-15 absolute -top-4 left-[15%] text-center pt-0.5">منتجاتنا</span> شنو نخبز؟</h2>
           {/* mobile */}
-          <h2 className={woolWich.className + " text-[40px] w-87.5 text-[#411D13] font-black mb-6 relative block md:hidden"}><span className="w-40 h-8.5 bg-[#F97D46] text-[20px] rounded-2xl text-white font-normal rotate-15 absolute -top-6 right-0 text-center pt-0.5">OUR PRODUCTS</span> SIGNATURES WE BAKE</h2>
+          <h2 className={playpenSansArabic.className + " text-[64px] w-87.5 text-[#411D13] font-black mb-6 relative block md:hidden"}><span className="w-30 h-8.5 bg-[#F97D46] text-[20px] rounded-2xl text-white font-normal -rotate-15 absolute -top-4 left-[13%] text-center pt-0.5">منتجاتنا</span> شنو نخبز؟</h2>
           {/* end mobile */}
 
-          <div className="flex justify-center md:gap-10 gap-4 mb-12 md:mb-0 md:ml-auto">
+          <div className="flex justify-center md:gap-10 gap-4 mb-12 md:mb-0 md:mr-auto">
             <div
-              className={woolWich.className +" cursor-pointer md:text-[25px] text-[16px] rounded-full text-[#371659] hover:bg-[#e3d0fb] bg-[#E0C8FD] md:px-6.25 px-3.5"}
+              className={playpenSansArabic.className + " cursor-pointer md:text-[32px] font-semibold text-[20px] rounded-full text-[#371659] hover:bg-[#e3d0fb] bg-[#E0C8FD] md:px-6.25 py-1.5 px-4"}
             >
-              COOKIES
+              كوكيز
             </div>
             <div
-              className={woolWich.className + " cursor-pointer md:text-[25px] text-[16px] rounded-full text-[#9A3C0E] hover:bg-[#fccfbb] bg-[#FFCAB3] md:px-6.25 px-3.5"}
+              className={playpenSansArabic.className + " cursor-pointer md:text-[32px] font-semibold text-[20px] rounded-full text-[#9A3C0E] hover:bg-[#fccfbb] bg-[#FFCAB3] md:px-6.25 py-1.5 px-4"}
             >
-              BROWNIES&apos;
+              براونيز
             </div>
             <div
-              className={woolWich.className + " cursor-pointer md:text-[25px] text-[16px] rounded-full text-[#1C727E] hover:bg-[#a8dce2] bg-[#A3CDD3] md:px-6.25 px-3.5"}
+              className={playpenSansArabic.className + " cursor-pointer md:text-[32px] font-semibold text-[20px] rounded-full text-[#1C727E] hover:bg-[#a8dce2] bg-[#A3CDD3] md:px-6.25 py-1.5 px-4"}
             >
-              MINI CAKES
+              ميني كيك
             </div>
           </div>
         </div>
 
         <div className="relative min-[1400px]:w-full md:max-[1400px]:w-350 w-full overflow-hidden">
-          <div 
-            className="flex gap-6 animate-infinite-scroll hover:[animation-play-state:paused]"
+          <div
+            className="flex gap-6 animate-infinite-scroll-ar hover:[animation-play-state:paused]"
             style={{ width: "max-content" }}
           >
             {/* We map the array twice for the seamless loop */}
-            {[{ image: "/pink-strawberry-cake-slice.jpg", title: "CAKE SIGNATURE CAKE" },
-                { image: "/mini-decorated-cakes.jpg", title: "MINI CAKES"},
-                { image: "/green-decorated-cake-with-name-sultan.jpg", title: "SPECIAL CAKE" },
-                { image: "/mini-decorated-cakes.jpg", title: "MINI CAKES" },
-                { image: "/pink-strawberry-cake-slice.jpg", title: "STRAWBERRY DELIGHT" },
-                { image: "/green-decorated-cake-with-name-sultan.jpg", title: "CUSTOM CAKE" },
-                { image: "/pink-strawberry-cake-slice.jpg", title: "CAKE SIGNATURE CAKE" },
-                { image: "/mini-decorated-cakes.jpg", title: "MINI CAKES" },
-                { image: "/green-decorated-cake-with-name-sultan.jpg", title: "SPECIAL CAKE" },
-                { image: "/mini-decorated-cakes.jpg", title: "MINI CAKES" },
-                { image: "/pink-strawberry-cake-slice.jpg", title: "STRAWBERRY DELIGHT" },
-                { image: "/green-decorated-cake-with-name-sultan.jpg", title: "CUSTOM CAKE" },].map((item, index) => (
+            {[{ image: "/pink-strawberry-cake-slice.jpg", title: "كيك سان سباستيان" },
+            { image: "/mini-decorated-cakes.jpg", title: "ميني كيك" },
+            { image: "/green-decorated-cake-with-name-sultan.jpg", title: "كيك مميز" },
+            { image: "/mini-decorated-cakes.jpg", title: "ميني كيك" },
+            { image: "/pink-strawberry-cake-slice.jpg", title: "كيك بالفراوله" },
+            { image: "/green-decorated-cake-with-name-sultan.jpg", title: "كيك خاص حسب الطلب" },
+            { image: "/pink-strawberry-cake-slice.jpg", title: "كيك سان سباستيان" },
+            { image: "/mini-decorated-cakes.jpg", title: "ميني كيك" },
+            { image: "/green-decorated-cake-with-name-sultan.jpg", title: "كيك مميز" },
+            { image: "/mini-decorated-cakes.jpg", title: "ميني كيك" },
+            { image: "/pink-strawberry-cake-slice.jpg", title: "كيك بالفراوله" },
+            { image: "/green-decorated-cake-with-name-sultan.jpg", title: "كيك خاص حسب الطلب" },].map((item, index) => (
               <Link
-                href={`https://wa.me/96566754902?text=I%20want%20to%20order%20${item.title}`}
+                href={`https://wa.me/96566754902?text=%D8%A7%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A7%D8%B7%D9%84%D8%A8%20${item.title}`}
                 target="_blank"
-                key={index} 
+                key={index}
                 className="shrink-0 w-75 group cursor-pointer flex flex-col justify-center"
               >
                 <div className="relative h-75 rounded-2xl overflow-hidden shadow-md">
@@ -229,7 +233,7 @@ export default function Home() {
                         height={30}
                         className="w-auto h-auto"
                       />
-                      Order Now
+                      اطلب الحين
                     </h3>
                   </div>
                 </div>
@@ -256,15 +260,15 @@ export default function Home() {
               alt="Meet Cookies"
               width={300}
               height={100}
-              className="object-bottom w-full h-full md:block hidden rounded-t-[72px]"
+              className="object-bottom w-full h-full md:block hidden rounded-t-[72px] transform scale-x-[-1]"
             />
           </div>
-          <div className="bg-white rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:mr-3 md:ml-0 md:w-1/2 md:h-[95%] md:flex md:flex-col md:items-start md:justify-center">
-            <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#361659]"}>MEET COOKIES YOU&apos;VE NEVER TASTED BEFORE!</h2>
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              At Krumbs, every cookie comes from our secret, proudly homemade recipes. mixed, tested, and perfected by us! Crunchy, gooey, chunky, melty... every bite is an adventure created in our kitchen. 🍪
+          <div className="bg-white rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:ml-3 md:mrs-0 md:w-1/2 md:h-[95%] md:flex md:flex-col md:items-start md:justify-center">
+            <h2 className={playpenSansArabic.className + " md:text-[48px] text-[40px] leading-none font-bold mb-6 text-[#361659]"}>جرّب كوكيز ما ذقتها قبل</h2>
+            <p className="text-gray-700 mb-8 text-[20px] leading-relaxed">
+              في  Krumbs (كرمبز)، كل كوكيز نسويها بوصفاتنا السرّية والبيتية. نخلطها، نجرّبها، ونضبطها بإيدينا مقرمشة، سايحة، تذوب بالفم. كل قضمة مغامرة حلوة من مطبخنا. 🍪
             </p>
-            <Button className="bg-[#6b3fa0] hover:bg-[#5a3486] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Try Fresh Cookies</Link></Button>
+            <Button className="bg-[#6b3fa0] hover:bg-[#5a3486] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">جرّب كوكيزنا المميّزة</Link></Button>
           </div>
         </div>
       </section>
@@ -272,12 +276,12 @@ export default function Home() {
       {/* Dream Section */}
       <section className="my-10 mx-6 md:w-350 md:mx-auto md:h-112.5">
         <div className="flex flex-col items-center bg-[#FDE8BF] w-full rounded-[72px] md:flex-row md:h-full md:justify-between">
-          <div className="bg-[#FEF8F1] rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:ml-3 md:mr-0 md:w-[45%] md:h-[95%] md:flex md:flex-col md:justify-center md:items-start">
-            <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#468B4D]"}>IF YOU CAN DREAM IT, WE CAN BAKE IT!</h2>
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              At Krumbs, your wildest cake ideas come to life. colors, characters, names, themes… go crazy, we love it! Your celebration deserves a cake as fun as YOU.
+          <div className="bg-[#FEF8F1] rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:mr-3 md:ml-0 md:w-[45%] md:h-[95%] md:flex md:flex-col md:justify-center md:items-start">
+            <h2 className={playpenSansArabic.className + " md:text-[48px] text-[40px] leading-none font-bold mb-6 text-[#468B4D]"}>كيكة على قد خيالك</h2>
+            <p className="text-gray-700 mb-8 text-[20px] leading-relaxed">
+              في Krumbs نحول أفكارك المجنونة لواقع. ألوان، شخصيات، أسماء، ثيمات, خلك جريء، إحنا نحب هالشي. مناسبتك تستاهل كيك بنفس روحك وحلاوتك.
             </p>
-            <Button className="bg-[#468B4D] hover:bg-[#54945a] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Design My Cake</Link></Button>
+            <Button className="bg-[#468B4D] hover:bg-[#54945a] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">صمّم كيكك</Link></Button>
           </div>
           <div className="relative h-100 w-full md:w-[45%] md:h-full md:mr-[5%]">
             <Image
@@ -310,12 +314,12 @@ export default function Home() {
               className="object-bottom w-full h-full md:block hidden rounded-t-[72px]"
             />
           </div>
-          <div className="bg-white rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:mr-3 md:ml-0 md:w-1/2 md:h-[95%] md:flex md:flex-col md:items-start md:justify-center">
-            <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#80003C]"}>THE SWEETEST WAY TO SAY YOU CARE!</h2>
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              Our Krumbs Gift Boxes are stuffed with joy—cookies, cakes, treats, and smiles! Perfect for surprising the people who make your life sweeter.
+          <div className="bg-white rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:ml-3 md:mr-0 md:w-1/2 md:h-[95%] md:flex md:flex-col md:items-start md:justify-center">
+            <h2 className={playpenSansArabic.className + " md:text-[48px] text-[40px] leading-none font-bold mb-6 text-[#80003C]"}>رسالة اهتمام ما تنسى</h2>
+            <p className="text-gray-700 mb-8 text-[20px] leading-relaxed">
+              مع بوكسات Krumbs، الفرح يصير له طعم. تشكيلة كوكيز، كيك، وحلويات لذيذة، تنحط في بوكس واحد مليان إحساس وحب. مثالية للمفاجآت الصغيرة اللي معناها كبير، وللناس اللي دايم يضيفون شي حلو لحياتك وتحب ترد لهم الجميل.
             </p>
-            <Button className="bg-[#80003C] hover:bg-[#a80350] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Send a Happy Box</Link></Button>
+            <Button className="bg-[#80003C] hover:bg-[#a80350] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">ارسل بوكس السعادة</Link></Button>
           </div>
         </div>
       </section>
@@ -323,12 +327,12 @@ export default function Home() {
       {/* Celebrate Section */}
       <section className="my-10 mx-6 md:w-350 md:mx-auto md:h-112.5">
         <div className="flex flex-col items-center bg-[#FFCAB3] w-full rounded-[72px] md:flex-row md:h-full md:justify-between">
-          <div className="bg-[#FEF8F1] rounded-[72px] p-12 m-3 md:my-3 md:ml-3 md:mr-0 md:w-[45%] md:flex md:flex-col md:justify-center md:items-start md:p-15 md:h-auto">
-            <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#B45425]"}>CELEBRATE WITHOUT THE STRESS!</h2>
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              From themed cakes to dessert tables to cute setups. Krumbs handles all the fun stuff, so you can actually enjoy your party. We make your event look good, and taste even better.
+          <div className="bg-[#FEF8F1] rounded-[72px] p-12 m-3 md:my-3 md:mr-5 md:ml-0 md:w-[45%] md:flex md:flex-col md:justify-center md:items-start md:p-20 md:h-auto">
+            <h2 className={playpenSansArabic.className + " md:text-[48px] text-[40px] leading-none font-bold mb-6 text-[#B45425]"}>احتفل وإحنا نشيلها عنك</h2>
+            <p className="text-gray-700 mb-8 text-[20px] leading-relaxed">
+              من كيكات بثيمات، لطاولات حلويات، لترتيبات كيوت. Krumbs تتكفّل بكل الأشياء الحلوة، وانت استمتع بالحفلة نخلّي مناسبتك شكلها يفتح النفس وطعمها أروع.
             </p>
-            <Button className="bg-[#B45425] hover:bg-[#c76534] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Design My Cake</Link></Button>
+            <Button className="bg-[#B45425] hover:bg-[#c76534] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">خلّنا نرتّب حفلتك</Link></Button>
           </div>
           <div className="relative h-100 w-full md:w-[45%] md:h-full md:mr-[5%]">
             <Image
@@ -345,30 +349,30 @@ export default function Home() {
       {/* Instagram Section */}
       <section className="mt-15 py-16 bg-[#ffc9d9]">
         <div className="flex flex-col">
-          <h2 className={woolWich.className + " md:text-[64px] text-[32px] font-normal mb-12 text-center"}>FOLLOW US ON INSTAGRAM</h2>
+          <h2 className={playpenSansArabic.className + " md:text-[64px] text-[32px] font-bold mb-12 text-center"}>تابعونا على الانستغرام</h2>
           <div className="relative min-[1400px]:w-full md:max-[1400px]:w-350 w-full overflow-hidden">
-            <div 
-              className="flex gap-6 animate-infinite-scroll hover:[animation-play-state:paused]"
+            <div
+              className="flex gap-6 animate-infinite-scroll-ar hover:[animation-play-state:paused]"
               style={{ width: "max-content" }}
             >
               {/* We map the array twice for the seamless loop */}
-              {[{ image: "/1stinsta.png"},
-                  { image: "/2ndinsta.png"},
-                  { image: "/3rdinsta.png"},
-                  { image: "/4thinsta.png"},
-                  { image: "/5thinsta.png"},
-                  { image: "/1stinsta.png"},
-                  { image: "/2ndinsta.png"},
-                  { image: "/3rdinsta.png"},
-                  { image: "/4thinsta.png"},
-                  { image: "/5thinsta.png"},
-                  { image: "/1stinsta.png"},
-                  { image: "/2ndinsta.png"},
-                  { image: "/3rdinsta.png"}].map((item, index) => (
+              {[{ image: "/1stinsta.png" },
+              { image: "/2ndinsta.png" },
+              { image: "/3rdinsta.png" },
+              { image: "/4thinsta.png" },
+              { image: "/5thinsta.png" },
+              { image: "/1stinsta.png" },
+              { image: "/2ndinsta.png" },
+              { image: "/3rdinsta.png" },
+              { image: "/4thinsta.png" },
+              { image: "/5thinsta.png" },
+              { image: "/1stinsta.png" },
+              { image: "/2ndinsta.png" },
+              { image: "/3rdinsta.png" }].map((item, index) => (
                 <Link
                   href={`https://www.instagram.com/crumbs.kw?igsh=a3M1cW45cmU3cXYx`}
                   target="_blank"
-                  key={index} 
+                  key={index}
                   className="shrink-0 w-75 group cursor-pointer flex flex-col justify-center"
                 >
                   <div className="relative h-75 rounded-2xl overflow-hidden shadow-md">
@@ -395,21 +399,8 @@ export default function Home() {
       <section className="pt-16 pb-10 bg-white overflow-hidden">
         <div className="mx-auto md:w-350">
           <div className="flex items-center md:justify-between justify-center mb-12 md:w-350">
-            <h2 className={woolWich.className + " md:text-[64px] text-[32px] font-normal text-[#80003C]"}>THE STORIES BEHIND EVERY BITE.</h2>
+            <h2 className={playpenSansArabic.className + " md:text-[64px] text-[32px] font-bold text-[#80003C]"}>القصص اللي ورا كل قضمة</h2>
             <div className="gap-2 hidden md:flex">
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full bg-transparent"
-                onClick={() => {
-                  const container = document.getElementById("testimonials-container")
-                  if (container) {
-                    container.scrollBy({ left: -400, behavior: "smooth" })
-                  }
-                }}
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </Button>
               <Button
                 variant="outline"
                 size="icon"
@@ -423,6 +414,19 @@ export default function Home() {
               >
                 <ChevronRight className="w-5 h-5" />
               </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full bg-transparent"
+                onClick={() => {
+                  const container = document.getElementById("testimonials-container")
+                  if (container) {
+                    container.scrollBy({ left: -400, behavior: "smooth" })
+                  }
+                }}
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </Button>
             </div>
           </div>
         </div>
@@ -431,51 +435,50 @@ export default function Home() {
           <div
             id="testimonials-container"
             className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth [&::-webkit-scrollbar]:hidden"
-            style={{ paddingLeft: "max(1.5rem, calc((100vw - 80rem) / 2))" }}
+            style={{ paddingRight: "max(1.5rem, calc((100vw - 89rem) / 2))" }}
           >
             <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 justify-end">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400 text-xl">
                     ★
                   </span>
                 ))}
               </div>
-              <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5">
-                &apos;&apos; I ordered a custom birthday cake and WOW, Krumbs made it look exactly like the Pinterest picture but
-                even better. &apos;&apos;
+              <p className="text-base font-bold text-gray-700 mb-6 leading-relaxed h-22.5">
+                &apos;&apos;طلبت كيك عيد ميلاد حسب الطلب، ووااو! Krumbs سوّوه نفس صورة البنترست بالضبط. ويمكن أحلى بعد.&apos;&apos;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                <p className="font-semibold">Hadeer Mohamed</p>
                 <div className="flex items-center gap-1">
+                  <span className="text-sm">تقييمات جوجل</span>
                   <span className="font-bold">G</span>
-                  <span className="text-sm">Google Reviews</span>
                 </div>
+                <p className="font-semibold">هدير محمد</p>
               </div>
             </div>
 
             <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 justify-end">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400 text-xl">
                     ★
                   </span>
                 ))}
               </div>
-              <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5 text-right" dir="rtl">
-                &apos;&apos;أهديت بوكس من Krumbs لصديقتي، ومش تأثرت. البوكس مرتب وطعمه شي يبرد القلب.&apos;&apos;
+              <p className="text-base font-bold text-gray-700 mb-6 leading-relaxed h-22.5 text-right" dir="rtl">
+                &apos;&apos;أهديت بوكس من Krumbs لصديقتي، وصج تأثرت. البوكس مرتب وطعمه شي يبرد القلب.&apos;&apos;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                <p className="font-semibold">Ghadeer Sultan</p>
                 <div className="flex items-center gap-1">
+                  <span className="text-sm">تقييمات جوجل</span>
                   <span className="font-bold">G</span>
-                  <span className="text-sm">Google Reviews</span>
                 </div>
+                <p className="font-semibold">غدير سلطان</p>
               </div>
             </div>
 
             <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 justify-end">
                 {[...Array(4)].map((_, i) => (
                   <span key={i} className="text-yellow-400 text-xl">
                     ★
@@ -483,56 +486,56 @@ export default function Home() {
                 ))}
                 <span className="text-gray-300 text-xl">★</span>
               </div>
-              <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5">
-                &apos;&apos; The smell when you open the box is instant happiness. Science should study this. &apos;&apos;
+              <p className="text-base font-bold text-gray-700 mb-6 leading-relaxed h-22.5">
+                &apos;&apos;ريحة الكوكيز أول ما تفتح البوكس؟
+                سعادة فورية… العلم لازم يدرس هالشي&apos;&apos;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                <p className="font-semibold">Momen Salem</p>
                 <div className="flex items-center gap-1">
+                  <span className="text-sm">تقييمات جوجل</span>
                   <span className="font-bold">G</span>
-                  <span className="text-sm">Google Reviews</span>
                 </div>
+                <p className="font-semibold">مؤمن سالم</p>
               </div>
             </div>
 
             <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 justify-end">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400 text-xl">
                     ★
                   </span>
                 ))}
               </div>
-              <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5">
-                &apos;&apos;I&apos;m never worried when trying to find cake or treat to bring to my family gatherings, Krumbs has THE
-                BEST cookies!&apos;&apos;
+              <p className="text-base font-bold text-gray-700 mb-6 leading-relaxed h-22.5">
+                &apos;&apos;لا أشعر بالقلق أبداً عندما أحاول العثور على كعكة أو حلوى لأحضرها إلى تجمعات عائلتي، فشركة krumbs لديها أفضل أنواع البسكويت!&apos;&apos;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                <p className="font-semibold">Samreen Sultana</p>
                 <div className="flex items-center gap-1">
+                  <span className="text-sm">تقييمات جوجل</span>
                   <span className="font-bold">G</span>
-                  <span className="text-sm">Google Reviews</span>
                 </div>
+                <p className="font-semibold">سمرين سلطانة</p>
               </div>
             </div>
 
             <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 justify-end">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400 text-xl">
                     ★
                   </span>
                 ))}
               </div>
-              <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5">
-                &apos;&apos;Ordered for a corporate event and everyone was impressed. Professional packaging and delicious treats!&apos;&apos;
+              <p className="text-base font-bold text-gray-700 mb-6 leading-relaxed h-22.5">
+                &apos;&apos;طلبناها لفعالية خاصة بالشركة، وقد نالت إعجاب الجميع. تغليف احترافي وحلويات لذيذة!&apos;&apos;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                <p className="font-semibold">Ahmed Hassan</p>
                 <div className="flex items-center gap-1">
+                  <span className="text-sm">تقييمات جوجل</span>
                   <span className="font-bold">G</span>
-                  <span className="text-sm">Google Reviews</span>
                 </div>
+                <p className="font-semibold">أحمد حسن</p>
               </div>
             </div>
           </div>
@@ -542,12 +545,14 @@ export default function Home() {
       {/* Meet Our Team Section */}
       <section className="my-10 mx-6 md:w-350 md:mx-auto md:h-112.5">
         <div className="flex flex-col items-center bg-[#FCC7E0] w-full rounded-[72px] md:flex-row md:h-full md:justify-between">
-          <div className="bg-white rounded-[72px] p-12 m-3 md:my-3 md:ml-3 md:mr-0 md:w-[45%] md:p-12.5 md:h-auto">
-            <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#80003C]"}>MEET OUR TEAM</h2>
+          <div className="bg-white rounded-[72px] p-12 m-3 md:my-3 md:mr-4 md:ml-0 md:w-[45%] md:p-12.5 md:h-auto">
+            <h2 className={playpenSansArabic.className + " md:text-[64px] text-[40px] leading-none font-bold mb-6 text-[#80003C]"}>تعرف على فريقنا</h2>
             <p className="text-gray-700 mb-8 leading-relaxed">
-              I&apos;m Salman, a Kuwaiti engineer. Cooking became my quiet space during a challenging time, and after stepping away from social media, I returned to the kitchen—where this cookie project began. Within one year, I sold over 10,000 cookies anonymously. Today, I&apos;m stepping forward to grow the brand openly and expand into cakes, with the same spirit that started it all.
+              أنا سلمان، مهندس كويتي، والطبخ ما كان مجرد هواية بالنسبة لي، كان مساحة هدوء في فترة صعبة من بعد ما ابتعدت عن السوشال ميديا، وجدت نفسي أرجع للمطبخ، أشتغل بهدوء وأركز على التفاصيل. من هنا بدأت فكرة الكوكيز مشروع بسيط كبر خطوة
+              <br/><br/>
+              خلال سنة واحدة، بعت أكثر من 10,000 كوكيز من غير ما أحد يعرف من هو صاحب البراند. اليوم قررت أطلع للعلن، وأطور المشروع بشكل أوضح وأضيف عالم الكيك بنفس الروح.
             </p>
-            <p className={woolWich.className + " text-[#80003C] text-[24px]"}>SALMAN AL OTAIBI</p>
+            <p className={playpenSansArabic.className + " text-[#80003C] font-bold text-[24px]"}>سلمان العتيبي</p>
           </div>
           <div className="relative h-100 w-full md:w-[45%] md:h-full md:mr-[5%]">
             <Image
@@ -581,38 +586,38 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-8 mb-6">
               <Link href="#" className="text-sm hover:underline">
-                Cookies Boxes
+                بوكسات كوكيز
               </Link>
               <Link href="#" className="text-sm hover:underline">
-                Brownies
+                براونيز
               </Link>
               <Link href="#" className="text-sm hover:underline">
-                Mini Cakes
+                ميني كيك
               </Link>
               <Link href="#" className="text-sm hover:underline">
-                Special Cakes
+                كيك خاص حسب الطلب
               </Link>
-              <Link href="#" className="text-sm hover:underline">
-                About
+              <Link href="#aboutus" className="text-sm hover:underline">
+                منو إحنا
               </Link>
-              <Link href="#" className="text-sm hover:underline">
-                Contact
+              <Link href="https://wa.me/message/PPKFUFEXJHIWJ1" className="text-sm hover:underline">
+                تواصل ويانا
               </Link>
             </div>
           </div>
 
           <div className="flex items-center gap-4 justify-center">
             <Link href="#">
-              <Image src={'/facebook.png' } alt="Facebook" width={24} height={24} className="w-6 h-6" />
+              <Image src={'/Facebook.png'} alt="Facebook" width={24} height={24} className="w-6 h-6" />
             </Link>
             <Link href="#">
-              <Image src={'/TikTok.png' } alt="TikTok" width={24} height={24} className="w-6 h-6" />
+              <Image src={'/TikTok.png'} alt="TikTok" width={24} height={24} className="w-6 h-6" />
             </Link>
             <Link href="https://www.instagram.com/crumbs.kw?igsh=a3M1cW45cmU3cXYx">
-              <Image src={'/Instagram.png' } alt="Instagram" width={24} height={24} className="w-6 h-6" />
+              <Image src={'/Instagram.png'} alt="Instagram" width={24} height={24} className="w-6 h-6" />
             </Link>
             <Link href="https://wa.me/message/PPKFUFEXJHIWJ1">
-              <Image src={'/WhatsApp.png' } alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
+              <Image src={'/WhatsApp.png'} alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
             </Link>
           </div>
         </div>

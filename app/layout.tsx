@@ -8,8 +8,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Krumbs - Freshly Baked Just For You",
-  description: "Premium cookies and special cakes delivered warm to your doorstep.",
+  title: "Krumbs - توّه طالع من الفرن خصيصًا لك",
+  description: "كوكيز فاخرة وكيكات مميّزة نوصلها لك وهي دافية لين باب بيتك.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <body
         className={`${poppins.className} font-sans antialiased h-full py-1` }
       >

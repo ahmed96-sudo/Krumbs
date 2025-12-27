@@ -184,3 +184,30 @@ body {
     animation-play-state: paused;
   }
 }
+
+@layer utilities {
+  @keyframes infinite-scroll-ar {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(50%);
+    }
+  }
+
+  .animate-infinite-scroll-ar {
+    animation: infinite-scroll-ar 40s linear infinite;
+  }
+
+  .pause-on-hover-ar:hover {
+    animation-play-state: paused;
+  }
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
