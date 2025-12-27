@@ -24,7 +24,7 @@ export default function HomeEng() {
                 <div className="flex items-center">
                     <span className="text-2xl font-bold">
                         <Link href="/">
-                            <Image src="/logo.png" alt="Krumbs Logo" width={120} height={40} />
+                            <Image src="/Logo.png" alt="Krumbs Logo" width={120} height={40} />
                         </Link>
                     </span>
                 </div>
@@ -575,7 +575,7 @@ export default function HomeEng() {
                         <div className="flex items-center justify-center mb-8">
                             <span className="text-2xl font-bold">
                                 <Link href="/">
-                                    <Image src="/logo.png" alt="Krumbs Logo" width={120} height={40} />
+                                    <Image src="/Logo.png" alt="Krumbs Logo" width={120} height={40} />
                                 </Link>
                             </span>
                         </div>
