@@ -143,7 +143,7 @@ export default function Home() {
       <section id="aboutus" className="mt-16 mb-10 mx-6 bg-white md:w-350 md:mx-auto ">
         <div className="flex flex-col-reverse md:flex md:flex-row md:justify-between ">
           <div className="md:w-[45%] h-110.5">
-            <video autoPlay loop muted className="rounded-3xl h-110.5 object-cover w-full mt-5 md:mt-0">
+            <video loop muted playsInline autoPlay className="rounded-3xl h-110.5 object-cover w-full mt-5 md:mt-0">
               <source src="/about.mov" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
