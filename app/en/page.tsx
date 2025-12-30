@@ -148,12 +148,12 @@ export default function HomeEng() {
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div className="md:w-[49%] flex flex-col">
+                    <div className="md:w-[49%] flex flex-col md:justify-center">
                         <h2 className={woolWich.className + " md:text-[64px] text-[40px] text-[#411D13] font-black mb-6 relative hidden md:block"}>OUR<span className="w-26 h-8.5 bg-[#F5DF23] text-[20px] rounded-2xl text-[#411D13] font-normal md:rotate-11 -rotate-20 absolute md:left-11.5 md:top-0 bottom-7 left-[35%] text-center pt-0.5">ABOUT US</span> PASSION FOR BAKING</h2>
                         {/* mobile */}
                         <h2 className={woolWich.className + " text-[40px] text-[#411D13] font-black mb-6 relative block md:hidden"}><span className="w-26 h-8.5 bg-[#F5DF23] text-[20px] rounded-2xl text-[#411D13] font-normal rotate-20 absolute -top-6 left-0 text-center pt-0.5">ABOUT US</span> OUR PASSION FOR BAKING</h2>
                         {/* end mobile */}
-                        <p className="text-gray-700 md:leading-10 leading-relaxed">
+                        <p className="text-[#5E5E5E] md:leading-10 leading-relaxed">
                             Our story began in a small kitchen where we chased a simple passion, creating cookies that tasted like pure joy. What started as homemade experiments soon became our signature recipes, each crafted with heart. After seeing how one cookie could spark a smile, we knew we wanted to share that happiness with everyone. Today, we bake with that same purpose: spreading joy, one cookie at a time.
                         </p>
                     </div>
@@ -193,18 +193,18 @@ export default function HomeEng() {
                         style={{ width: "max-content" }}
                     >
                         {/* We map the array twice for the seamless loop */}
-                        {[{ image: "/pink-strawberry-cake-slice.jpg", title: "CAKE SIGNATURE CAKE" },
-                        { image: "/mini-decorated-cakes.jpg", title: "MINI CAKES" },
-                        { image: "/green-decorated-cake-with-name-sultan.jpg", title: "SPECIAL CAKE" },
-                        { image: "/mini-decorated-cakes.jpg", title: "MINI CAKES" },
-                        { image: "/pink-strawberry-cake-slice.jpg", title: "STRAWBERRY DELIGHT" },
-                        { image: "/green-decorated-cake-with-name-sultan.jpg", title: "CUSTOM CAKE" },
-                        { image: "/pink-strawberry-cake-slice.jpg", title: "CAKE SIGNATURE CAKE" },
-                        { image: "/mini-decorated-cakes.jpg", title: "MINI CAKES" },
-                        { image: "/green-decorated-cake-with-name-sultan.jpg", title: "SPECIAL CAKE" },
-                        { image: "/mini-decorated-cakes.jpg", title: "MINI CAKES" },
-                        { image: "/pink-strawberry-cake-slice.jpg", title: "STRAWBERRY DELIGHT" },
-                        { image: "/green-decorated-cake-with-name-sultan.jpg", title: "CUSTOM CAKE" },].map((item, index) => (
+                        {[{ image: "/mangocake.png", title: "MANGO CAKE" },
+                        { image: "/specialcake.png", title: "SPECIAL CAKE" },
+                        { image: "/cookiebox.png", title: "COOKIES BOX" },
+                        { image: "/sancake.png", title: "SAN SEBASTIAN CAKE" },
+                        { image: "/5thcake.png", title: "COOKIES" },
+                        { image: "/mangocake.png", title: "MANGO CAKE" },
+                        { image: "/specialcake.png", title: "SPECIAL CAKE" },
+                        { image: "/cookiebox.png", title: "COOKIES BOX" },
+                        { image: "/sancake.png", title: "SAN SEBASTIAN CAKE" },
+                        { image: "/5thcake.png", title: "COOKIES" },
+                        { image: "/mangocake.png", title: "MANGO CAKE" },
+                        { image: "/specialcake.png", title: "SPECIAL CAKE" },].map((item, index) => (
                             <Link
                                 href={`https://wa.me/96566754902?text=I%20want%20to%20order%20${item.title}`}
                                 target="_blank"
@@ -233,7 +233,7 @@ export default function HomeEng() {
                                         </h3>
                                     </div>
                                 </div>
-                                <h4 className="text-center mt-5">{item.title}</h4>
+                                <h4 className={woolWich.className + " text-center md:text-[23px] text-[#371659] md:font-normal mt-5"}>{item.title}</h4>
                             </Link>
                         ))}
                     </div>
@@ -261,10 +261,10 @@ export default function HomeEng() {
                     </div>
                     <div className="bg-white rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:mr-3 md:ml-0 md:w-1/2 md:h-[95%] md:flex md:flex-col md:items-start md:justify-center">
                         <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#361659]"}>MEET COOKIES YOU&apos;VE NEVER TASTED BEFORE!</h2>
-                        <p className="text-gray-700 mb-8 leading-relaxed">
+                        <p className="text-[#411D13] mb-8 leading-relaxed">
                             At Krumbs, every cookie comes from our secret, proudly homemade recipes. mixed, tested, and perfected by us! Crunchy, gooey, chunky, melty... every bite is an adventure created in our kitchen. 🍪
                         </p>
-                        <Button className="bg-[#6b3fa0] hover:bg-[#5a3486] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Try Fresh Cookies</Link></Button>
+                        <Button className="bg-[#361659] hover:bg-[#5a3486] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Try Fresh Cookies</Link></Button>
                     </div>
                 </div>
             </section>
@@ -274,7 +274,7 @@ export default function HomeEng() {
                 <div className="flex flex-col items-center bg-[#FDE8BF] w-full rounded-[72px] md:flex-row md:h-full md:justify-between">
                     <div className="bg-[#FEF8F1] rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:ml-3 md:mr-0 md:w-[45%] md:h-[95%] md:flex md:flex-col md:justify-center md:items-start">
                         <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#468B4D]"}>IF YOU CAN DREAM IT, WE CAN BAKE IT!</h2>
-                        <p className="text-gray-700 mb-8 leading-relaxed">
+                        <p className="text-[#411D13] mb-8 leading-relaxed">
                             At Krumbs, your wildest cake ideas come to life. colors, characters, names, themes… go crazy, we love it! Your celebration deserves a cake as fun as YOU.
                         </p>
                         <Button className="bg-[#468B4D] hover:bg-[#54945a] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Design My Cake</Link></Button>
@@ -312,7 +312,7 @@ export default function HomeEng() {
                     </div>
                     <div className="bg-white rounded-[72px] p-12 m-3 md:p-16 md:my-3 md:mr-3 md:ml-0 md:w-1/2 md:h-[95%] md:flex md:flex-col md:items-start md:justify-center">
                         <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#80003C]"}>THE SWEETEST WAY TO SAY YOU CARE!</h2>
-                        <p className="text-gray-700 mb-8 leading-relaxed">
+                        <p className="text-[#411D13] mb-8 leading-relaxed">
                             Our Krumbs Gift Boxes are stuffed with joy—cookies, cakes, treats, and smiles! Perfect for surprising the people who make your life sweeter.
                         </p>
                         <Button className="bg-[#80003C] hover:bg-[#a80350] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Send a Happy Box</Link></Button>
@@ -325,7 +325,7 @@ export default function HomeEng() {
                 <div className="flex flex-col items-center bg-[#FFCAB3] w-full rounded-[72px] md:flex-row md:h-full md:justify-between">
                     <div className="bg-[#FEF8F1] rounded-[72px] p-12 m-3 md:my-3 md:ml-3 md:mr-0 md:w-[45%] md:flex md:flex-col md:justify-center md:items-start md:p-15 md:h-auto">
                         <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#B45425]"}>CELEBRATE WITHOUT THE STRESS!</h2>
-                        <p className="text-gray-700 mb-8 leading-relaxed">
+                        <p className="text-[#411D13] mb-8 leading-relaxed">
                             From themed cakes to dessert tables to cute setups. Krumbs handles all the fun stuff, so you can actually enjoy your party. We make your event look good, and taste even better.
                         </p>
                         <Button className="bg-[#B45425] hover:bg-[#c76534] text-white rounded-full px-6 shadow-[3px_4px_0px_#000000]"><Link href={'https://wa.me/message/PPKFUFEXJHIWJ1'} target="_blank">Design My Cake</Link></Button>
@@ -345,7 +345,7 @@ export default function HomeEng() {
             {/* Instagram Section */}
             <section className="mt-15 py-16 bg-[#ffc9d9]">
                 <div className="flex flex-col">
-                    <h2 className={woolWich.className + " md:text-[64px] text-[32px] font-normal mb-12 text-center"}>FOLLOW US ON INSTAGRAM</h2>
+                    <h2 className={woolWich.className + " md:text-[64px] text-[32px] font-normal mb-12 text-center text-[#411D13]"}>FOLLOW US ON INSTAGRAM</h2>
                     <div className="relative min-[1400px]:w-full md:max-[1400px]:w-350 w-full overflow-hidden">
                         <div
                             className="flex gap-6 animate-infinite-scroll hover:[animation-play-state:paused]"
@@ -431,22 +431,22 @@ export default function HomeEng() {
                     <div
                         id="testimonials-container"
                         className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth [&::-webkit-scrollbar]:hidden"
-                        style={{ paddingLeft: "max(1.5rem, calc((100vw - 80rem) / 2))" }}
+                        style={{ paddingLeft: "max(1.5rem, calc((100vw - 89rem) / 2))" }}
                     >
-                        <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
+                        <div className="border-2 border-black rounded-2xl p-6 w-100 shrink-0 bg-white">
                             <div className="flex gap-1 mb-4">
                                 {[...Array(5)].map((_, i) => (
-                                    <span key={i} className="text-yellow-400 text-xl">
+                                    <span key={i} className="text-[#F58424] text-xl">
                                         ★
                                     </span>
                                 ))}
                             </div>
-                            <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5">
+                            <p className="text-base font-black text-black mb-6 leading-relaxed h-22.5">
                                 &apos;&apos; I ordered a custom birthday cake and WOW, Krumbs made it look exactly like the Pinterest picture but
                                 even better. &apos;&apos;
                             </p>
-                            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                                <p className="font-semibold">Hadeer Mohamed</p>
+                            <div className="flex items-center justify-between pt-4 border-t border-black">
+                                <p className="font-normal">Hadeer Mohamed</p>
                                 <div className="flex items-center gap-1">
                                     <span className="font-bold">G</span>
                                     <span className="text-sm">Google Reviews</span>
@@ -454,19 +454,19 @@ export default function HomeEng() {
                             </div>
                         </div>
 
-                        <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
+                        <div className="border-2 border-black rounded-2xl p-6 w-100 shrink-0 bg-white">
                             <div className="flex gap-1 mb-4">
                                 {[...Array(5)].map((_, i) => (
-                                    <span key={i} className="text-yellow-400 text-xl">
+                                    <span key={i} className="text-[#F58424] text-xl">
                                         ★
                                     </span>
                                 ))}
                             </div>
-                            <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5 text-right" dir="rtl">
+                            <p className="text-base font-black text-black mb-6 leading-relaxed h-22.5 text-right" dir="rtl">
                                 &apos;&apos;أهديت بوكس من Krumbs لصديقتي، ومش تأثرت. البوكس مرتب وطعمه شي يبرد القلب.&apos;&apos;
                             </p>
-                            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                                <p className="font-semibold">Ghadeer Sultan</p>
+                            <div className="flex items-center justify-between pt-4 border-t border-black">
+                                <p className="font-normal">Ghadeer Sultan</p>
                                 <div className="flex items-center gap-1">
                                     <span className="font-bold">G</span>
                                     <span className="text-sm">Google Reviews</span>
@@ -474,20 +474,20 @@ export default function HomeEng() {
                             </div>
                         </div>
 
-                        <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
+                        <div className="border-2 border-black rounded-2xl p-6 w-100 shrink-0 bg-white">
                             <div className="flex gap-1 mb-4">
                                 {[...Array(4)].map((_, i) => (
-                                    <span key={i} className="text-yellow-400 text-xl">
+                                    <span key={i} className="text-[#F58424] text-xl">
                                         ★
                                     </span>
                                 ))}
                                 <span className="text-gray-300 text-xl">★</span>
                             </div>
-                            <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5">
+                            <p className="text-base font-black text-black mb-6 leading-relaxed h-22.5">
                                 &apos;&apos; The smell when you open the box is instant happiness. Science should study this. &apos;&apos;
                             </p>
-                            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                                <p className="font-semibold">Momen Salem</p>
+                            <div className="flex items-center justify-between pt-4 border-t border-black">
+                                <p className="font-normal">Momen Salem</p>
                                 <div className="flex items-center gap-1">
                                     <span className="font-bold">G</span>
                                     <span className="text-sm">Google Reviews</span>
@@ -495,20 +495,20 @@ export default function HomeEng() {
                             </div>
                         </div>
 
-                        <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
+                        <div className="border-2 border-black rounded-2xl p-6 w-100 shrink-0 bg-white">
                             <div className="flex gap-1 mb-4">
                                 {[...Array(5)].map((_, i) => (
-                                    <span key={i} className="text-yellow-400 text-xl">
+                                    <span key={i} className="text-[#F58424] text-xl">
                                         ★
                                     </span>
                                 ))}
                             </div>
-                            <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5">
+                            <p className="text-base font-black text-black mb-6 leading-relaxed h-22.5">
                                 &apos;&apos;I&apos;m never worried when trying to find cake or treat to bring to my family gatherings, Krumbs has THE
                                 BEST cookies!&apos;&apos;
                             </p>
-                            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                                <p className="font-semibold">Samreen Sultana</p>
+                            <div className="flex items-center justify-between pt-4 border-t border-black">
+                                <p className="font-normal">Samreen Sultana</p>
                                 <div className="flex items-center gap-1">
                                     <span className="font-bold">G</span>
                                     <span className="text-sm">Google Reviews</span>
@@ -516,19 +516,19 @@ export default function HomeEng() {
                             </div>
                         </div>
 
-                        <div className="border-2 border-gray-200 rounded-2xl p-6 w-100 shrink-0 bg-white">
+                        <div className="border-2 border-black rounded-2xl p-6 w-100 shrink-0 bg-white">
                             <div className="flex gap-1 mb-4">
                                 {[...Array(5)].map((_, i) => (
-                                    <span key={i} className="text-yellow-400 text-xl">
+                                    <span key={i} className="text-[#F58424] text-xl">
                                         ★
                                     </span>
                                 ))}
                             </div>
-                            <p className="text-base text-gray-700 mb-6 leading-relaxed h-22.5">
+                            <p className="text-base font-black text-black mb-6 leading-relaxed h-22.5">
                                 &apos;&apos;Ordered for a corporate event and everyone was impressed. Professional packaging and delicious treats!&apos;&apos;
                             </p>
-                            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                                <p className="font-semibold">Ahmed Hassan</p>
+                            <div className="flex items-center justify-between pt-4 border-t border-black">
+                                <p className="font-normal">Ahmed Hassan</p>
                                 <div className="flex items-center gap-1">
                                     <span className="font-bold">G</span>
                                     <span className="text-sm">Google Reviews</span>
@@ -544,7 +544,7 @@ export default function HomeEng() {
                 <div className="flex flex-col items-center bg-[#FCC7E0] w-full rounded-[72px] md:flex-row md:h-full md:justify-between">
                     <div className="bg-white rounded-[72px] p-12 m-3 md:my-3 md:ml-3 md:mr-0 md:w-[45%] md:p-12.5 md:h-auto">
                         <h2 className={woolWich.className + " md:text-[64px] text-[40px] leading-none font-normal mb-6 text-[#80003C]"}>MEET OUR TEAM</h2>
-                        <p className="text-gray-700 mb-8 leading-relaxed">
+                        <p className="text-[#411D13] mb-8 leading-relaxed">
                             I&apos;m Salman, a Kuwaiti engineer. Cooking became my quiet space during a challenging time, and after stepping away from social media, I returned to the kitchen—where this cookie project began. Within one year, I sold over 10,000 cookies anonymously. Today, I&apos;m stepping forward to grow the brand openly and expand into cakes, with the same spirit that started it all.
                         </p>
                         <p className={woolWich.className + " text-[#80003C] text-[24px]"}>SALMAN AL OTAIBI</p>
@@ -580,22 +580,22 @@ export default function HomeEng() {
                             </span>
                         </div>
                         <div className="flex flex-wrap justify-center gap-8 mb-6">
-                            <Link href="#" className="text-sm hover:underline">
+                            <Link href="#" className="text-sm text-[#411D13] hover:underline">
                                 Cookies Boxes
                             </Link>
-                            <Link href="#" className="text-sm hover:underline">
+                            <Link href="#" className="text-sm text-[#411D13] hover:underline">
                                 Brownies
                             </Link>
-                            <Link href="#" className="text-sm hover:underline">
+                            <Link href="#" className="text-sm text-[#411D13] hover:underline">
                                 Mini Cakes
                             </Link>
-                            <Link href="#" className="text-sm hover:underline">
+                            <Link href="#" className="text-sm text-[#411D13] hover:underline">
                                 Special Cakes
                             </Link>
-                            <Link href="#" className="text-sm hover:underline">
+                            <Link href="#" className="text-sm text-[#411D13] hover:underline">
                                 About
                             </Link>
-                            <Link href="#" className="text-sm hover:underline">
+                            <Link href="#" className="text-sm text-[#411D13] hover:underline">
                                 Contact
                             </Link>
                         </div>
